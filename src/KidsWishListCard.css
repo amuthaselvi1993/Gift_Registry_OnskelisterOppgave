@@ -1,0 +1,77 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "christmasText";
+  src: url("./assets/Christmas.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+#kidDetails {
+  font-family: christmasText;
+  font-size: 2em;
+  padding: 10px;
+  border: 3px solid white;
+  /* color: rgb(241, 233, 2); */
+}
+#kidDetails > p {
+  margin: 0px;
+  padding: 5px;
+}
+.glow-text {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #04ff3b, 0 0 30px #04ff3b,
+    0 0 40px #04ff3b;
+}
+.info {
+  display: flex;
+  gap: 30px;
+}
+
+.glittering {
+  font-family: christmasText;
+  z-index: -5;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  border: 3px solid transparent;
+  background-size: 400% 400%;
+  border-image: linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4,
+    #fbc2eb,
+    #a18cd1,
+    #fbc2eb,
+    #ff9a9e
+  );
+  border-image-slice: 1;
+  animation: glitterAnimation 3s ease infinite;
+  background: linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4,
+    #fbc2eb,
+    #a18cd1,
+    #fbc2eb,
+    #ff9a9e
+  );
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  color: #000;
+}
+
+@keyframes glitterAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
