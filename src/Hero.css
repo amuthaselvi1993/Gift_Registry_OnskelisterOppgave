@@ -53,22 +53,26 @@
 #kids-list::-webkit-scrollbar {
   display: none;
 }
-.credits {
-  position: absolute;
+#credits {
+  position: fixed;
+  display: flex;
   bottom: 3px;
   right: 5px;
   background-color: rgba(238, 231, 231, 0.371);
   color: white;
   padding: 2px;
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: Arial, sans-serif;
   border-radius: 5px;
-  cursor: pointer;
+  z-index: 100;
 }
 
-.credits a {
+#credits a {
   color: white;
   cursor: pointer;
+}
+#credits a:hover {
+  color: blue;
 }
 
 @media screen and (max-width: 600px) {
