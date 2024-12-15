@@ -16,7 +16,6 @@
   width: 100%;
   overflow: hidden;
   display: flex;
-  /* background-image: url(./assets/favicon.png); */
 }
 .hero-video {
   position: absolute;
@@ -26,28 +25,68 @@
   overflow: hidden;
   object-fit: cover;
   object-position: center;
-  opacity: 85%;
+  opacity: 90%;
   background-color: rgb(246, 57, 57);
 }
 #mainContainer h1 {
   font-size: 4rem;
   font-weight: 800;
   position: fixed;
-  padding-bottom: 30px;
+  padding: 10px 0px;
   z-index: 100;
   top: 0px;
 }
 
 #kids-list {
-  display: flex; /* Add this */
-  flex-direction: column; /* Arrange children in a column */
+  display: grid;
+  margin: 0% 20%;
+  margin-top: 7%;
+  margin-bottom: 3%;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 20px;
-  margin-top: 120px;
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 #kids-list::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
+  display: none;
+}
+.credits {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  background-color: rgba(238, 231, 231, 0.371);
+  color: white;
+  padding: 2px;
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.credits a {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  #kids-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #kids-list {
+    margin: 15% 10%;
+  }
+  #mainContainer h1 {
+    font-size: 3rem;
+  }
+  .credits {
+    font-size: 0.7em;
+  }
 }

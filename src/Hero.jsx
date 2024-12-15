@@ -224,6 +224,14 @@ export default function Hero() {
           })}
         </div>
       </div>
+      <div class="credits">
+        <p>
+          Video by:{" "}
+          <a href="https://www.vecteezy.com/free-videos/christmas-cartoon-background">
+            Christmas Cartoon Background Stock Videos by Vecteezy
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
