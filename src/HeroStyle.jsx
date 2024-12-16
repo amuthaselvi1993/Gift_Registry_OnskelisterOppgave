@@ -1,23 +1,14 @@
-#mainContainer {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* overflow-y: auto; */
-}
+import styled from "styled-components";
 
-.video-background {
+export const VideoBackground = styled.div`
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
   display: flex;
-}
-.hero-video {
+`;
+
+export const HeroVideo = styled.video`
   position: absolute;
   z-index: -10;
   width: 100%;
@@ -27,17 +18,33 @@
   object-position: center;
   opacity: 90%;
   background-color: rgb(246, 57, 57);
-}
-#mainContainer h1 {
+`;
+
+export const MainContainer = styled.div`
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const Heading = styled.h1`
   font-size: 4rem;
   font-weight: 800;
   position: fixed;
   padding: 10px 0px;
   z-index: 100;
   top: 0px;
-}
 
-#kids-list {
+  @media screen and (max-width: 420px) {
+    font-size: 3rem;
+  }
+`;
+
+export const KidsList = styled.div`
   display: grid;
   margin: 0% 20%;
   margin-top: 7%;
@@ -49,11 +56,22 @@
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-#kids-list::-webkit-scrollbar {
-  display: none;
-}
-#credits {
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+  }
+  @media screen and (max-width: 420px) {
+    margin: 15% 10%;
+  }
+`;
+
+export const Credits = styled.div`
   position: fixed;
   display: flex;
   bottom: 3px;
@@ -65,32 +83,17 @@
   font-family: Arial, sans-serif;
   border-radius: 5px;
   z-index: 100;
-}
 
-#credits a {
-  color: white;
-  cursor: pointer;
-}
-#credits a:hover {
-  color: blue;
-}
-
-@media screen and (max-width: 600px) {
-  #kids-list {
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  #kids-list {
-    margin: 15% 10%;
-  }
-  #mainContainer h1 {
-    font-size: 3rem;
-  }
-  .credits {
+  @media screen and (max-width: 420px) {
     font-size: 0.7em;
   }
-}
+`;
+
+export const CreditsLink = styled.a`
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: blue;
+  }
+`;

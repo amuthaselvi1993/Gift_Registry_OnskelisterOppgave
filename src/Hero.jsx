@@ -1,36 +1,36 @@
-import "./Hero.css";
 import KidsWishListCard from "./KidsWishListCard";
 import video from "./assets/bg-video.mp4";
 import kidsWishlist from "./assets/wishlist";
+import * as Styles from "./HeroStyle";
 
 export default function Hero() {
   return (
-    <div className="video-background">
-      <video autoPlay loop muted className="hero-video">
+    <Styles.VideoBackground>
+      <Styles.HeroVideo autoPlay loop muted className="hero-video">
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </Styles.HeroVideo>
 
-      <div id="mainContainer">
-        <h1> Julegaveliste Fra Barn!</h1>
-        <div id="kids-list">
+      <Styles.MainContainer>
+        <Styles.Heading>Julegaveliste Fra Barn!</Styles.Heading>
+        <Styles.KidsList>
           {kidsWishlist.map((kid) => {
             return <KidsWishListCard key={kid.id} kid={kid} />;
           })}
-        </div>
-      </div>
+        </Styles.KidsList>
+      </Styles.MainContainer>
 
-      <div id="credits">
+      <Styles.Credits>
         <p>
           Video by :
-          <a
+          <Styles.CreditsLink
             href="https://www.vecteezy.com/free-videos/christmas-cartoon-background"
             target="_blank"
           >
             Christmas Cartoon Background Stock Videos by Vecteezy
-          </a>
+          </Styles.CreditsLink>
         </p>
-      </div>
-    </div>
+      </Styles.Credits>
+    </Styles.VideoBackground>
   );
 }
