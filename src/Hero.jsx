@@ -12,7 +12,7 @@ export default function Hero() {
       </Styles.HeroVideo>
 
       <Styles.MainContainer>
-        <Styles.Heading>Julegaveliste Fra Barn!</Styles.Heading>
+        <Styles.Heading>🎄❄️Julegaveliste Fra Barn!🎄❄️</Styles.Heading>
         <Styles.KidsList>
           {kidsWishlist.map((kid) => {
             return <KidsWishListCard key={kid.id} kid={kid} />;

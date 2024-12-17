@@ -30,12 +30,13 @@ export default function KidsWishListCard({
               <span>A</span>
               <span>R</span>
               <span>N</span>
+              <span>🎅🏻</span>
             </p>
           ) : null}
         </div>
 
         <div id="wishlist">
-          <p>Ønskeliste</p>
+          <p>Ønskeliste :</p>
           {wishlist.map((wish, index) => {
             return <Wishes key={index} wish={wish} />;
           })}
