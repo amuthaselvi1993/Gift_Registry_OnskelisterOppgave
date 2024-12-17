@@ -1,5 +1,3 @@
-import "./Wishes.css";
-
 export default function Wishes({ wish }) {
   return (
     <>
