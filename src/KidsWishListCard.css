@@ -12,6 +12,7 @@
   display: grid;
   grid-template-rows: 0.5fr 2fr;
   grid-template-columns: 2fr 0.5fr;
+
   /* color: rgb(241, 233, 2); */
   transition: transform 0.3s ease;
 }

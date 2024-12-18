@@ -39,8 +39,11 @@ export const Heading = styled.h1`
   z-index: 100;
   top: 0px;
 
-  @media screen and (max-width: 420px) {
-    font-size: 3rem;
+  @media screen and (max-width: 720px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 1.7rem;
   }
 `;
 
